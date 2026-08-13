@@ -47,7 +47,8 @@ civic-connect/
 
 ### Home page
 
-(Add a screenshot here after deployment.)
+<img width="1892" height="863" alt="home-page" src="https://github.com/user-attachments/assets/8f30e732-67b7-4482-935e-9bb4fb7e2f01" />
+
 
 ## Live Demo
 
