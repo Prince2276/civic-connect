@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Civic Connect</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <i class="fas fa-city"></i>
+          Civic Connect
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="community.html">Community</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="report.html" class="btn btn-primary"> Report Issue </a>
+      </div>
+    </header>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+      <div class="container">
+        <div class="dashboard-title">
+          <h1>Civic Analytics Dashboard</h1>
+          <p>
+            Monitor issue reports, resolution progress, and community activity.
+          </p>
+        </div>
+
+        <div class="dashboard-actions">
+          <button class="btn btn-secondary">
+            <i class="fas fa-download"></i>
+            Export Report
+          </button>
+
+          <a href="report.html" class="btn btn-primary">
+            <i class="fas fa-plus"></i>
+            New Report
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Cards -->
+    <section class="dashboard-stats">
+      <div class="container stats-grid">
+        <div class="stat-card blue">
+          <div class="stat-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+
+          <div class="stat-info">
+            <h3 id="totalReports">0</h3>
+            <p>Total reports</p>
+          </div>
+        </div>
+
+        <div class="stat-card orange">
+          <div class="stat-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+
+          <div class="stat-info">
+            <h3 id="pendingReports">0</h3>
+            <p>Pending</p>
+          </div>
+        </div>
+
+        <div class="stat-card green">
+          <div class="stat-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+
+          <div class="stat-info">
+            <h3 id="resolvedReports">0</h3>
+            <p>Resolved</p>
+          </div>
+        </div>
+
+        <div class="stat-card red">
+          <div class="stat-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+
+          <div class="stat-info">
+            <h3 id="highSeverity">0</h3>
+            <p>High priority</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="dashboard-charts">
+      <div class="container charts-grid">
+        <div class="chart-card">
+          <div class="card-header">
+            <h3>Reports by category</h3>
+          </div>
+
+          <canvas id="categoryChart"></canvas>
+        </div>
+
+        <div class="chart-card">
+          <div class="card-header">
+            <h3>Severity distribution</h3>
+          </div>
+
+          <canvas id="severityChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Reports + Activity -->
+    <section class="dashboard-content">
+      <div class="container content-grid">
+        <!-- Recent Reports -->
+        <div class="reports-card">
+          <div class="card-header">
+            <h3>Recent issue reports</h3>
+            <a href="explore.html">View all</a>
+          </div>
+
+          <div class="table-responsive">
+            <table class="reports-table">
+              <thead>
+                <tr>
+                  <th>Issue</th>
+                  <th>Category</th>
+                  <th>Location</th>
+                  <th>Severity</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody id="recentReportsTable">
+                <!-- Dynamic rows -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Activity -->
+        <aside class="activity-card">
+          <div class="card-header">
+            <h3>Recent activity</h3>
+          </div>
+
+          <div id="activityList" class="activity-list">
+            <!-- Dynamic activity -->
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <i class="fas fa-city"></i>
+            Civic Connect
+          </div>
+
+          <p>
+            A community-driven civic issue reporting and monitoring platform.
+          </p>
+        </div>
+
+        <div>
+          <h4>Platform</h4>
+          <a href="explore.html">Explore</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="community.html">Community</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h4>Follow</h4>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 Civic Connect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

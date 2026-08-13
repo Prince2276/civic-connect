@@ -1,0 +1,354 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Issue | Civic Connect</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/report.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">
+          <i class="fas fa-city"></i>
+          Civic Connect
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a href="report.html">Report</a>
+          <a href="dashboard.html">Dashboard</a>
+          <a href="community.html">Community</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="report.html" class="btn btn-primary">Report Issue</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="report-hero">
+      <div class="container report-hero-content">
+        <div class="hero-illustration">
+          <img src="assets/images/hero-city.svg" alt="City illustration" />
+        </div>
+
+        <div class="hero-text">
+          <span class="hero-badge">Community Issue Reporting</span>
+
+          <h1>Report a civic issue in your area</h1>
+
+          <p>
+            Help improve your community by reporting roads, water, garbage,
+            drainage, and public infrastructure problems. Your report helps
+            local authorities and volunteers take action faster.
+          </p>
+
+          <div class="hero-features">
+            <div>
+              <i class="fas fa-check-circle"></i> Track complaint status
+            </div>
+            <div><i class="fas fa-check-circle"></i> Upload issue photos</div>
+            <div>
+              <i class="fas fa-check-circle"></i> Community verified reports
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Report Form -->
+
+    <section class="report-form-section">
+      <div class="container">
+        ```
+        <div class="section-header">
+          <h2>Submit issue report</h2>
+          <p>Fill in the details below and submit your report.</p>
+        </div>
+
+        <div class="report-layout">
+          <!-- LEFT: Form -->
+          <div class="report-form-card">
+            <form id="reportForm">
+              <!-- Title -->
+              <div class="form-group">
+                <label>Issue title</label>
+                <input
+                  type="text"
+                  id="title"
+                  placeholder="e.g. Large pothole near Park Street"
+                  required
+                />
+              </div>
+
+              <!-- Category + Location -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Category</label>
+                  <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Roads</option>
+                    <option>Water</option>
+                    <option>Garbage</option>
+                    <option>Drainage</option>
+                    <option>Streetlights</option>
+                    <option>Parks</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Location</label>
+                  <input
+                    type="text"
+                    id="location"
+                    placeholder="Enter area or locality"
+                    required
+                  />
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="form-group">
+                <label>Description</label>
+                <textarea
+                  id="description"
+                  rows="5"
+                  placeholder="Describe the issue in detail..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Severity -->
+              <div class="form-group">
+                <label>Severity level</label>
+
+                <div class="severity-grid">
+                  <label class="severity-card">
+                    <input type="radio" name="severity" value="Low" checked />
+                    <span class="severity-icon low">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <span>Low</span>
+                  </label>
+
+                  <label class="severity-card">
+                    <input type="radio" name="severity" value="Medium" />
+                    <span class="severity-icon medium">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <span>Medium</span>
+                  </label>
+
+                  <label class="severity-card">
+                    <input type="radio" name="severity" value="High" />
+                    <span class="severity-icon high">
+                      <i class="fas fa-circle"></i>
+                    </span>
+                    <span>High</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Upload -->
+              <div class="form-group">
+                <label>Upload issue photo</label>
+
+                <div class="upload-box">
+                  <input type="file" id="image" accept="image/*" />
+
+                  <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Click to upload an image</p>
+                    <span>PNG, JPG or JPEG (max 5MB)</span>
+                  </div>
+                </div>
+
+                <!-- Image Preview -->
+                <div class="image-preview" id="imagePreview"></div>
+              </div>
+
+              <!-- Map -->
+              <div class="form-group">
+                <label>Select location on map</label>
+
+                <div id="reportMap"></div>
+
+                <input
+                  type="text"
+                  id="selectedLocation"
+                  placeholder="Selected coordinates will appear here"
+                  readonly
+                />
+              </div>
+
+              <!-- Buttons -->
+              <div class="form-actions">
+                <button type="reset" class="btn btn-secondary">
+                  Clear Form
+                </button>
+
+                <button type="submit" class="btn btn-primary">
+                  <i class="fas fa-paper-plane"></i>
+                  Submit Report
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- RIGHT: Sidebar -->
+          <aside class="report-sidebar">
+            <div class="sidebar-card">
+              <h3>Reporting tips</h3>
+
+              <ul>
+                <li>Upload a clear photo of the issue</li>
+                <li>Provide an accurate location</li>
+                <li>Describe the problem in detail</li>
+                <li>Choose the correct category</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Emergency contacts</h3>
+
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <strong>Municipal Helpline</strong>
+                  <p>1800-123-4567</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-tint"></i>
+                <div>
+                  <strong>Water Department</strong>
+                  <p>1800-555-0101</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card stats-card">
+              <h3>Average resolution</h3>
+
+              <div class="stat-number">3.2 Days</div>
+              <p>Most civic issues are resolved within three days.</p>
+            </div>
+
+            <div class="sidebar-card">
+              <h3>Today’s activity</h3>
+
+              <div class="activity-item">
+                <span class="status-dot green"></span>
+                18 issues resolved
+              </div>
+
+              <div class="activity-item">
+                <span class="status-dot blue"></span>
+                42 new reports
+              </div>
+
+              <div class="activity-item">
+                <span class="status-dot orange"></span>
+                7 inspections scheduled
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- Success Modal -->
+
+    <div class="success-modal" id="successModal">
+      ```
+      <div class="modal-content">
+        <div class="modal-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+
+        <h3>Report submitted successfully</h3>
+
+        <p>
+          Thank you for helping improve your community. Your issue has been
+          recorded.
+        </p>
+
+        <button id="closeModal" class="btn btn-primary">Continue</button>
+      </div>
+      ```
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <i class="fas fa-city"></i>
+            Civic Connect
+          </div>
+
+          <p>
+            A community-driven platform empowering citizens to improve urban
+            infrastructure and public services.
+          </p>
+        </div>
+
+        <div>
+          <h4>Platform</h4>
+          <a href="explore.html">Explore Issues</a>
+          <a href="report.html">Report Issue</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="community.html">Community</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h4>Follow us</h4>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 Civic Connect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- <script src="js/map.js"></script> -->
+
+    <script src="js/report.js"></script>
+  </body>
+</html>
