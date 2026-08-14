@@ -1,0 +1,253 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Issues | Civic Connect</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/explore.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header class="navbar">
+      <header class="navbar">
+  <div class="container nav-container">
+
+    <a href="index.html" class="logo">
+      <i class="fas fa-city"></i>
+      <span>Civic Connect</span>
+    </a>
+
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="explore.html" class="active">Explore</a>
+          <a href="report.html">Report</a>
+          <a href="community.html" >Community</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+    <a href="report.html" class="btn btn-primary nav-btn">
+      Report Issue
+    </a>
+
+  </div>
+</header>
+
+    <!-- Hero -->
+
+    <section class="explore-hero">
+      <div class="container">
+        <span class="hero-badge">Community Reported Issues</span>
+        <h1>Explore civic issues in your city</h1>
+        <p>
+          Browse public reports submitted by citizens, track issue status, and
+          stay informed about infrastructure problems in your community.
+        </p>
+
+        ```
+        <!-- Search -->
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by title, location, or category..."
+          />
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- Filters -->
+
+    <section class="filters-section">
+      <div class="container">
+   <div class="filters-grid">
+
+  <!-- Category -->
+  <div class="filter-group">
+    <label>Category</label>
+    <select id="categoryFilter">
+      <option value="">All Categories</option>
+      <option value="Roads">Roads</option>
+      <option value="Water">Water</option>
+      <option value="Garbage">Garbage</option>
+      <option value="Drainage">Drainage</option>
+      <option value="Street Lights">Street Lights</option>
+      <option value="Electricity">Electricity</option>
+      <option value="Public Transport">Public Transport</option>
+      <option value="Parks">Parks</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <!-- Status -->
+  <div class="filter-group">
+    <label>Status</label>
+    <select id="statusFilter">
+      <option value="">All Status</option>
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Resolved">Resolved</option>
+    </select>
+  </div>
+
+  <!-- Severity -->
+  <div class="filter-group">
+    <label>Severity</label>
+    <select id="severityFilter">
+      <option value="">All Severity</option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+  </div>
+
+  <!-- Actions -->
+  <div class="filter-group action-group">
+    <label>Action</label>
+    <button id="clearFilters" class="btn btn-secondary">
+      <i class="fas fa-filter-circle-xmark"></i>
+      Clear Filters
+    </button>
+  </div>
+
+</div>
+      </div>
+      ```
+    </section>
+
+    <!-- Results -->
+
+    <section class="explore-section">
+      <div class="container">
+        ```
+        <div class="results-header">
+          <h2>Recent reports</h2>
+          <p id="resultsCount">Loading reports...</p>
+        </div>
+
+        <!-- Dynamic Cards -->
+        <div class="issues-grid" id="issuesGrid">
+          <!-- JS will load issue cards here -->
+        </div>
+
+        <!-- Empty State -->
+        <div class="empty-state" id="emptyState" style="display: none">
+          <i class="fas fa-folder-open"></i>
+          <h3>No reports found</h3>
+          <p>Try adjusting your search or filter criteria.</p>
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- Issue Details Modal -->
+
+    <div class="issue-modal" id="issueModal">
+      <div class="modal-content">
+        ```
+        <button class="close-modal" id="closeModal">
+          <i class="fas fa-xmark"></i>
+        </button>
+
+        <div class="modal-image" id="modalImage"></div>
+
+        <div class="modal-body">
+          <div class="modal-header">
+            <h2 id="modalTitle"></h2>
+            <span id="modalStatus" class="status-badge"></span>
+          </div>
+
+          <div class="modal-meta">
+            <div class="meta-item">
+              <i class="fas fa-layer-group"></i>
+              <span id="modalCategory"></span>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-location-dot"></i>
+              <span id="modalLocation"></span>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-calendar"></i>
+              <span id="modalDate"></span>
+            </div>
+
+            <div class="meta-item">
+              <i class="fas fa-circle-exclamation"></i>
+              <span id="modalSeverity"></span>
+            </div>
+          </div>
+
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p id="modalDescription"></p>
+          </div>
+        </div>
+      </div>
+      ```
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <i class="fas fa-city"></i>
+            Civic Connect
+          </div>
+
+          <p>
+            A community-driven platform empowering citizens to improve urban
+            infrastructure and public services.
+          </p>
+        </div>
+
+        <div>
+          <h4>Platform</h4>
+          <a href="explore.html">Explore Issues</a>
+          <a href="report.html">Report Issue</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="community.html">Community</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h4>Follow us</h4>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 Civic Connect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/explore.js"></script>
+  </body>
+</html>
