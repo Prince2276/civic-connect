@@ -468,3 +468,45 @@ body {
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+
+  /* ===================================
+     CTA section
+  =================================== */
+
+  .cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+    gap: 24px;
+    border-radius: 22px;
+  }
+
+  .cta-content {
+    width: 100%;
+  }
+
+  .cta-box h2 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 14px;
+  }
+
+  .cta-box p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .cta-action {
+    width: 100%;
+  }
+
+  .cta-box .btn-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 14px;
+  }
+}

@@ -454,3 +454,18 @@
   color: #FFFFFF;
   transform: scale(1.05);
 }
+
+@media (max-width: 480px) {
+
+  .chart-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .chart-card canvas {
+    width: 100% !important;
+    height: 260px !important;
+    display: block;
+    margin: 0 auto;
+  }
+}

@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <link
       rel="stylesheet"
@@ -18,29 +19,30 @@
     <!-- Navbar -->
 
     <header class="navbar">
-      <header class="navbar">
-  <div class="container nav-container">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-city"></i>
+          Civic Connect
+        </a>
 
-    <a href="index.html" class="logo">
-      <i class="fas fa-city"></i>
-      <span>Civic Connect</span>
-    </a>
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
 
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
           <a href="explore.html" class="active">Explore</a>
           <a href="report.html">Report</a>
-          <a href="community.html" >Community</a>
+          <a href="community.html">Community</a>
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
 
-    <a href="report.html" class="btn btn-primary nav-btn">
-      Report Issue
-    </a>
-
-  </div>
-</header>
+        <a href="report.html" class="btn btn-primary desktop-report-btn">
+          Report Issue
+        </a>
+      </div>
+    </header>
 
     <!-- Hero -->
 
@@ -71,57 +73,55 @@
 
     <section class="filters-section">
       <div class="container">
-   <div class="filters-grid">
+        <div class="filters-grid">
+          <!-- Category -->
+          <div class="filter-group">
+            <label>Category</label>
+            <select id="categoryFilter">
+              <option value="">All Categories</option>
+              <option value="Roads">Roads</option>
+              <option value="Water">Water</option>
+              <option value="Garbage">Garbage</option>
+              <option value="Drainage">Drainage</option>
+              <option value="Street Lights">Street Lights</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Public Transport">Public Transport</option>
+              <option value="Parks">Parks</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
 
-  <!-- Category -->
-  <div class="filter-group">
-    <label>Category</label>
-    <select id="categoryFilter">
-      <option value="">All Categories</option>
-      <option value="Roads">Roads</option>
-      <option value="Water">Water</option>
-      <option value="Garbage">Garbage</option>
-      <option value="Drainage">Drainage</option>
-      <option value="Street Lights">Street Lights</option>
-      <option value="Electricity">Electricity</option>
-      <option value="Public Transport">Public Transport</option>
-      <option value="Parks">Parks</option>
-      <option value="Other">Other</option>
-    </select>
-  </div>
+          <!-- Status -->
+          <div class="filter-group">
+            <label>Status</label>
+            <select id="statusFilter">
+              <option value="">All Status</option>
+              <option value="Pending">Pending</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Resolved">Resolved</option>
+            </select>
+          </div>
 
-  <!-- Status -->
-  <div class="filter-group">
-    <label>Status</label>
-    <select id="statusFilter">
-      <option value="">All Status</option>
-      <option value="Pending">Pending</option>
-      <option value="In Progress">In Progress</option>
-      <option value="Resolved">Resolved</option>
-    </select>
-  </div>
+          <!-- Severity -->
+          <div class="filter-group">
+            <label>Severity</label>
+            <select id="severityFilter">
+              <option value="">All Severity</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
 
-  <!-- Severity -->
-  <div class="filter-group">
-    <label>Severity</label>
-    <select id="severityFilter">
-      <option value="">All Severity</option>
-      <option value="Low">Low</option>
-      <option value="Medium">Medium</option>
-      <option value="High">High</option>
-    </select>
-  </div>
-
-  <!-- Actions -->
-  <div class="filter-group action-group">
-    <label>Action</label>
-    <button id="clearFilters" class="btn btn-secondary">
-      <i class="fas fa-filter-circle-xmark"></i>
-      Clear Filters
-    </button>
-  </div>
-
-</div>
+          <!-- Actions -->
+          <div class="filter-group action-group">
+            <label>Action</label>
+            <button id="clearFilters" class="btn btn-secondary">
+              <i class="fas fa-filter-circle-xmark"></i>
+              Clear Filters
+            </button>
+          </div>
+        </div>
       </div>
       ```
     </section>
@@ -219,7 +219,6 @@
           <h4>Platform</h4>
           <a href="explore.html">Explore Issues</a>
           <a href="report.html">Report Issue</a>
-          <a href="dashboard.html">Dashboard</a>
         </div>
 
         <div>
@@ -249,5 +248,31 @@
     </footer>
 
     <script src="js/explore.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          menuToggle.querySelector("i").classList.remove("fa-times");
+          menuToggle.querySelector("i").classList.add("fa-bars");
+        });
+      });
+    </script>
   </body>
 </html>

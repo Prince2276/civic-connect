@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
     <link
       rel="stylesheet"
@@ -25,35 +26,31 @@
     <!-- Navbar -->
 
     <header class="navbar">
-      <header class="navbar">
-  <div class="container nav-container">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-city"></i>
+          Civic Connect
+        </a>
 
-    <a href="index.html" class="logo">
-      <i class="fas fa-city"></i>
-      <span>Civic Connect</span>
-    </a>
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
 
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks">
           <a href="index.html">Home</a>
-          <a href="explore.html" >Explore</a>
+          <a href="explore.html">Explore</a>
           <a href="report.html">Report</a>
-          <a href="community.html" >Community</a>
-          <a href="about.html" >About</a>
+          <a href="community.html">Community</a>
+          <a href="about.html">About</a>
           <a href="contact.html" class="active">Contact</a>
         </nav>
-
-    <a href="report.html" class="btn btn-primary nav-btn">
-      Report Issue
-    </a>
-
-  </div>
-</header>
+      </div>
+    </header>
 
     <!-- Hero -->
 
     <section class="contact-hero">
       <div class="container contact-hero-content">
-        
         <div class="hero-text">
           <span class="hero-badge">Contact Civic Connect</span>
 
@@ -69,7 +66,6 @@
           <img src="assets/images/customer.svg" alt="Contact Civic Connect" />
         </div>
       </div>
-
     </section>
 
     <!-- Contact Info -->
@@ -273,7 +269,6 @@
           <h4>Platform</h4>
           <a href="explore.html">Explore Issues</a>
           <a href="report.html">Report Issue</a>
-          <a href="dashboard.html">Dashboard</a>
         </div>
 
         <div>
@@ -303,5 +298,31 @@
     </footer>
 
     <script src="js/contact.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          menuToggle.querySelector("i").classList.remove("fa-times");
+          menuToggle.querySelector("i").classList.add("fa-bars");
+        });
+      });
+    </script>
   </body>
 </html>

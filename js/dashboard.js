@@ -137,14 +137,23 @@ new Chart(categoryCtx, {
                 "#8B5CF6",
                 "#06B6D4"
             ],
-            borderWidth: 0
+            borderWidth: 0,
+            cutout: "60%"
         }]
     },
     options: {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
-                position: "bottom"
+                position: "bottom",
+                labels: {
+                    boxWidth: 14,
+                    padding: 16,
+                    font: {
+                        size: 12
+                    }
+                }
             }
         }
     }
