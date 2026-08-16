@@ -169,8 +169,8 @@ When a user submits an issue, the report is stored locally in the browser and ca
 
 ### 🏠 Home Page
 
-![Civic Connect Home Page](<img width="1606" height="2054" alt="home" src="https://github.com/user-attachments/assets/e32fc840-fc3d-4433-89c9-fc5138312d86" />
-)
+![Civic Connect Home Page](./assets/images/screenshots/home.png)
+>>>>>>> 93aedb3 (Updated-2  project README)
 
 The landing page introduces Civic Connect with a clear call-to-action, civic statistics, issue categories, recent reports and an interactive city map.
 
@@ -178,7 +178,7 @@ The landing page introduces Civic Connect with a clear call-to-action, civic sta
 
 ### 🔍 Explore Issues
 
-![Explore Issues](assets/images/screenshots/explore.png)
+![Explore Issues](./assets/images/screenshots/explore.png)
 
 Browse reported civic issues using search and category, status and severity filters.
 
@@ -186,7 +186,7 @@ Browse reported civic issues using search and category, status and severity filt
 
 ### 📝 Report an Issue
 
-![Report Issue](assets/images/screenshots/report.png)
+![Report Issue](./assets/images/screenshots/report.png)
 
 Citizens can submit infrastructure and public-service issues through the reporting form.
 
@@ -194,7 +194,7 @@ Citizens can submit infrastructure and public-service issues through the reporti
 
 ### 📊 Analytics Dashboard
 
-![Analytics Dashboard](assets/images/screenshots/dashboard.png)
+![Analytics Dashboard](./assets/images/screenshots/dashboard.png)
 
 View report statistics, charts, recent reports, status controls and community activity.
 
@@ -202,7 +202,7 @@ View report statistics, charts, recent reports, status controls and community ac
 
 ### 👥 Community
 
-![Community Page](assets/images/screenshots/community.png)
+![Community Page](./assets/images/screenshots/community.png)
 
 Explore community programs, events, leaders, impact and engagement opportunities.
 
@@ -210,7 +210,7 @@ Explore community programs, events, leaders, impact and engagement opportunities
 
 ### ℹ️ About Us
 
-![Community Page](assets/images/screenshots/about.png)
+![Community Page](./assets/images/screenshots/about.png)
 
 Learn about Civic Connect's mission, core values, reporting process and impact on local communities.
 
@@ -218,7 +218,7 @@ Learn about Civic Connect's mission, core values, reporting process and impact o
 
 ### 📞 Contact
 
-![Community Page](assets/images/screenshots/contact.png)
+![Community Page](./assets/images/screenshots/contact.png)
 
 Get in touch with the Civic Connect support team through contact information, a message form and an interactive location map.
 
@@ -226,7 +226,7 @@ Get in touch with the Civic Connect support team through contact information, a 
 
 ### 📱 Mobile Responsive UI
 
-![Mobile Responsive Design](assets/images/screenshots/mobile.png)
+![Mobile Responsive Design](./assets/images/screenshots/mobile.png)
 
 Civic Connect is optimized for mobile devices with a responsive navigation system and mobile-friendly layouts.
 
