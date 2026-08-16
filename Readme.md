@@ -207,6 +207,22 @@ Explore community programs, events, leaders, impact and engagement opportunities
 
 ---
 
+### ℹ️ About Us
+
+![Community Page](assets/images/screenshots/about.png)
+
+Learn about Civic Connect's mission, core values, reporting process and impact on local communities.
+
+---
+
+### 📞 Contact
+
+![Community Page](assets/images/screenshots/contact.png)
+
+Get in touch with the Civic Connect support team through contact information, a message form and an interactive location map.
+
+---
+
 ### 📱 Mobile Responsive UI
 
 ![Mobile Responsive Design](assets/images/screenshots/mobile.png)
