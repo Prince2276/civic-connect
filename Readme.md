@@ -23,7 +23,6 @@ Built with **HTML5, CSS3, and JavaScript**, the project focuses on a clean user 
   - Category
   - Status
   - Severity
-
 - Clear all filters with a single action.
 
 ### 🗺️ Interactive City Map
@@ -45,11 +44,13 @@ Built with **HTML5, CSS3, and JavaScript**, the project focuses on a clean user 
 
 ### 🔄 Issue Status Management
 
-- Update issue status directly from the dashboard.
-- Supported statuses:
-  - Pending
-  - In Progress
-  - Resolved
+Update issue status directly from the dashboard.
+
+Supported statuses:
+
+- Pending
+- In Progress
+- Resolved
 
 ### 🗑️ Report Management
 
@@ -86,15 +87,15 @@ Built with **HTML5, CSS3, and JavaScript**, the project focuses on a clean user 
 
 ## 📄 Pages
 
-| Page             | Description                                                              |
-| ---------------- | ------------------------------------------------------------------------ |
-| 🏠 **Home**      | Introduction, statistics, categories, recent reports and interactive map |
-| 🔍 **Explore**   | Search, filter and browse reported civic issues                          |
-| 📝 **Report**    | Submit a new civic issue                                                 |
-| 📊 **Dashboard** | View analytics, reports, charts and community activity                   |
-| 👥 **Community** | Explore community programs, events, leaders and impact                   |
-| ℹ️ **About**     | Learn about Civic Connect, its mission, features and values              |
-| 📞 **Contact**   | Contact and communication section                                        |
+| Page             | Description                                                                   |
+| ---------------- | ----------------------------------------------------------------------------- |
+| 🏠 **Home**      | Introduction, statistics, categories, recent reports and interactive city map |
+| 🔍 **Explore**   | Search, filter and browse reported civic issues                               |
+| 📝 **Report**    | Submit a new civic issue                                                      |
+| 📊 **Dashboard** | View analytics, reports, charts and community activity                        |
+| 👥 **Community** | Explore community programs, events, leaders and impact                        |
+| ℹ️ **About**     | Learn about Civic Connect, its mission, features and values                   |
+| 📞 **Contact**   | Contact and communication section                                             |
 
 ---
 
@@ -161,7 +162,7 @@ When a user submits an issue, the report is stored locally in the browser and ca
 - Deleted when required
 - Exported as JSON
 
-> **Note:** Since the current implementation uses Local Storage, the data is stored locally in the user's browser and is not synchronized between different devices or users.
+> **Note:** Since the current implementation uses LocalStorage, the data is stored locally in the user's browser and is not synchronized between different devices or users.
 
 ---
 
@@ -170,7 +171,6 @@ When a user submits an issue, the report is stored locally in the browser and ca
 ### 🏠 Home Page
 
 ![Civic Connect Home Page](./assets/images/screenshots/home.png)
->>>>>>> 93aedb3 (Updated-2  project README)
 
 The landing page introduces Civic Connect with a clear call-to-action, civic statistics, issue categories, recent reports and an interactive city map.
 
@@ -210,7 +210,7 @@ Explore community programs, events, leaders, impact and engagement opportunities
 
 ### ℹ️ About Us
 
-![Community Page](./assets/images/screenshots/about.png)
+![About Civic Connect](./assets/images/screenshots/about.png)
 
 Learn about Civic Connect's mission, core values, reporting process and impact on local communities.
 
@@ -218,7 +218,7 @@ Learn about Civic Connect's mission, core values, reporting process and impact o
 
 ### 📞 Contact
 
-![Community Page](./assets/images/screenshots/contact.png)
+![Contact Civic Connect](./assets/images/screenshots/contact.png)
 
 Get in touch with the Civic Connect support team through contact information, a message form and an interactive location map.
 
@@ -229,8 +229,6 @@ Get in touch with the Civic Connect support team through contact information, a 
 ![Mobile Responsive Design](./assets/images/screenshots/mobile.png)
 
 Civic Connect is optimized for mobile devices with a responsive navigation system and mobile-friendly layouts.
-
-> **Screenshot paths can be updated after adding the final screenshots to the repository.**
 
 ---
 
@@ -305,30 +303,30 @@ You can open `index.html` directly in a browser or use **VS Code Live Server** f
 ## 🔄 Application Flow
 
 ```text
-                 ┌─────────────────┐
-                 │   Civic Connect │
-                 └────────┬────────┘
-                          │
-          ┌───────────────┼────────────────┐
-          │               │                │
-          ▼               ▼                ▼
-      Report Issue      Explore         Community
-          │               │
-          ▼               ▼
-      LocalStorage     Search / Filter
-          │               │
-          └───────┬───────┘
-                  │
-                  ▼
-             Dashboard
-                  │
-        ┌─────────┼─────────┐
-        ▼         ▼         ▼
-      Stats     Charts    Reports
+                  ┌─────────────────┐
+                  │   Civic Connect │
+                  └────────┬────────┘
                            │
-                    ┌──────┴──────┐
-                    ▼             ▼
-                Update Status   Delete
+           ┌───────────────┼────────────────┐
+           │               │                │
+           ▼               ▼                ▼
+      Report Issue       Explore        Community
+           │               │
+           ▼               ▼
+      LocalStorage     Search / Filter
+           │               │
+           └───────┬───────┘
+                   │
+                   ▼
+               Dashboard
+                   │
+          ┌────────┼─────────┐
+          ▼        ▼         ▼
+        Stats    Charts    Reports
+                            │
+                       ┌────┴────┐
+                       ▼         ▼
+                 Update Status  Delete
 ```
 
 ---
@@ -380,17 +378,18 @@ These limitations can be addressed through future backend and cloud integration.
 
 🚀 **[View Live Demo](https://civic-connect-teal-eight.vercel.app/)**
 
-The project is deployed on Vercel and available online.
+The project is deployed on **Vercel** and available online.
 
 ---
 
 ## 👨‍💻 Author
 
-**Prince Burnwal**
+### Prince Burnwal
 
 B.Tech Computer Science & Engineering Student
 
-- GitHub: [Prince2276](https://github.com/Prince2276)
+**GitHub:**  
+https://github.com/Prince2276
 
 ---
 
