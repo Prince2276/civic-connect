@@ -226,7 +226,9 @@ Get in touch with the Civic Connect support team through contact information, a 
 
 ### 📱 Mobile Responsive UI
 
-![Mobile Responsive Design](./assets/images/screenshots/mobile.png)
+![Mobile Responsive Design](./assets/images/screenshots/mobile-1.png)
+![Mobile Responsive Design](./assets/images/screenshots/mobile-2.png)
+![Mobile Responsive Design](./assets/images/screenshots/mobile-3.png)
 
 Civic Connect is optimized for mobile devices with a responsive navigation system and mobile-friendly layouts.
 
