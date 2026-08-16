@@ -1,0 +1,331 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Civic Connect</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <i class="fas fa-city"></i>
+          Civic Connect
+        </a>
+
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="explore.html">Explore</a>
+          <a href="report.html">Report</a>
+          <a href="community.html">Community</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <a href="report.html" class="btn btn-primary desktop-report-btn">
+          Report Issue
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+
+    <section class="contact-hero">
+      <div class="container contact-hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">Contact Civic Connect</span>
+
+          <h1>Get in touch with our civic support team</h1>
+
+          <p>
+            Have a question, suggestion, partnership inquiry, or need assistance
+            with a civic report? We would love to hear from you.
+          </p>
+        </div>
+
+        <div class="hero-image">
+          <img src="assets/images/customer.svg" alt="Contact Civic Connect" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info -->
+
+    <section class="contact-info-section">
+      <div class="container">
+        ```
+        <div class="contact-info-grid">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Office</h3>
+            <p>Salt Lake Sector V</p>
+            <p>Kolkata, West Bengal</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-phone"></i>
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+            <p>Mon – Fri, 9 AM – 6 PM</p>
+          </div>
+
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>support@civicconnect.in</p>
+            <p>contact@civicconnect.in</p>
+          </div>
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- Contact Form + Map -->
+
+    <section class="contact-main-section">
+      <div class="container">
+        ```
+        <div class="contact-layout">
+          <div class="contact-form-card">
+            <div class="section-header">
+              <h2>Send us a message</h2>
+              <p>We usually respond within 24 hours.</p>
+            </div>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Full Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label>Subject</label>
+                  <select id="subject" required>
+                    <option value="">Select subject</option>
+                    <option>General Inquiry</option>
+                    <option>Report Issue Support</option>
+                    <option>Partnership</option>
+                    <option>Volunteer Registration</option>
+                    <option>Technical Support</option>
+                    <option>Feedback</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Message</label>
+                <textarea
+                  id="message"
+                  rows="6"
+                  placeholder="Write your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-map-card">
+            <h3>Our Location</h3>
+
+            <div id="contactMap"></div>
+
+            <div class="map-info">
+              <div class="map-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <strong>Working Hours</strong>
+                  <p>Monday – Friday, 9:00 AM – 6:00 PM</p>
+                </div>
+              </div>
+
+              <div class="map-item">
+                <i class="fas fa-headset"></i>
+                <div>
+                  <strong>Support</strong>
+                  <p>Response within 24 hours</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="faq-section">
+      <div class="container">
+        ```
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3>How do I report a civic issue?</h3>
+            <p>
+              Visit the Report page, fill in the issue details, upload a photo,
+              and submit your report.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Can I track my complaint status?</h3>
+            <p>
+              Yes, reported issues can be tracked through the Explore page and
+              status updates.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3>How can I join the community?</h3>
+            <p>
+              Visit the Community page and register as a volunteer or community
+              member.
+            </p>
+          </div>
+
+          <div class="faq-card">
+            <h3>Is Civic Connect free to use?</h3>
+            <p>
+              Yes, Civic Connect is a free platform for citizens to report and
+              track local civic issues.
+            </p>
+          </div>
+        </div>
+      </div>
+      ```
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="logo footer-logo">
+            <i class="fas fa-city"></i>
+            Civic Connect
+          </div>
+
+          <p>
+            A community-driven platform empowering citizens to improve urban
+            infrastructure and public services.
+          </p>
+        </div>
+
+        <div>
+          <h4>Platform</h4>
+          <a href="explore.html">Explore Issues</a>
+          <a href="report.html">Report Issue</a>
+        </div>
+
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="community.html">Community</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+          <h4>Follow us</h4>
+
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2026 Civic Connect. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+    <script>
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          menuToggle.querySelector("i").classList.remove("fa-times");
+          menuToggle.querySelector("i").classList.add("fa-bars");
+        });
+      });
+    </script>
+  </body>
+</html>
