@@ -161,7 +161,7 @@ When a user submits an issue, the report is stored locally in the browser and ca
 - Deleted when required
 - Exported as JSON
 
-> **Note:** Since the current implementation uses LocalStorage, the data is stored locally in the user's browser and is not synchronized between different devices or users.
+> **Note:** Since the current implementation uses Local Storage, the data is stored locally in the user's browser and is not synchronized between different devices or users.
 
 ---
 
@@ -169,7 +169,8 @@ When a user submits an issue, the report is stored locally in the browser and ca
 
 ### 🏠 Home Page
 
-![Civic Connect Home Page](assets/images/screenshots/home.png)
+![Civic Connect Home Page](<img width="1606" height="2054" alt="home" src="https://github.com/user-attachments/assets/e32fc840-fc3d-4433-89c9-fc5138312d86" />
+)
 
 The landing page introduces Civic Connect with a clear call-to-action, civic statistics, issue categories, recent reports and an interactive city map.
 
