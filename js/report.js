@@ -108,7 +108,7 @@ reportForm.addEventListener("submit", function (e) {
 closeModal.addEventListener("click", function () {
     successModal.style.display = "none";
 
-    window.location.href = "dashboard.html";
+    window.location.href = "explore.html";
 });
 
 // ===============================
